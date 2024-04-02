@@ -1,7 +1,8 @@
 import RestCard from "./RestCard";
 
 import { useEffect, useState } from "react";
-import Shimmer from "./Shimmer";
+import { ShimmerHome } from "./Shimmer";
+import { Link } from "react-router-dom";
 const Body = () => {
   const [RestList, SetRestList] = useState([]);
   const [searchInput, SetsearchInput] = useState("");
@@ -63,7 +64,7 @@ const Body = () => {
     );
 
     const json = await api.json();
-    console.log(json);
+    // console.log(json);
 
     SetRestList(
       json.data?.cards[1]?.card?.card.gridElements.infoWithStyle.restaurants
@@ -77,7 +78,7 @@ const Body = () => {
   if (RestList.length === 0) {
     return (
       <>
-        <Shimmer />
+        <ShimmerHome />
       </>
     );
   }
@@ -87,6 +88,7 @@ const Body = () => {
       <div className="body-items">
         <div className="search">
           <input
+            placeholder=" Search for Restaurant"
             className="search-input"
             type="text"
             value={searchInput}
@@ -148,31 +150,19 @@ const Body = () => {
             </div>
           )}
         </div>
-        {/* <div className="filter-btn">
-          <button
-            className="btn"
-            onClick={() => {
-              // const listed1 = RestList.filter(
-              //   (item) => item.info.avgRating > 4.5
-              // );
-              const listed = RestList.sort(
-                (a, b) => b.info.avgRating - a.info.avgRating
-              );
-              console.log(listed);
-              // console.log(listed1);
-              SetFilteredList(listed);
-            }}
-          >
-            filter
-          </button>
-        </div> */}
       </div>
       {filteredList.length === 0 ? (
         <h1>Search something else...</h1>
       ) : (
         <div className="body-card">
           {filteredList.map((resObj) => (
-            <RestCard key={resObj.info.id} resObj={resObj} />
+            <Link
+              style={{ textDecoration: "none", color: "inherit" }}
+              key={resObj.info.id}
+              to={"/restaurant/" + resObj.info.id}
+            >
+              <RestCard resObj={resObj} />
+            </Link>
           ))}
         </div>
       )}

@@ -1,4 +1,6 @@
 import { CDN_URL } from "../utils/constant";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export const RestCard = (props) => {
   const { resObj } = props;
@@ -12,9 +14,12 @@ export const RestCard = (props) => {
       </div>
       <div className="rest-card-items">
         <li className="card-items-name">{name}</li>
-        <li className="card-items-avgRating">{avgRating}</li>
+        <div className="rating-container">
+          <FontAwesomeIcon icon={faStar} />
+          <li className="card-items-avgRating">{avgRating}</li>
+        </div>
         <li className="card-items-cuisines">{cuisines.join(",")}</li>
-        <li className="card-items-costForTwo">{costForTwo}</li>
+        {/* <li className="card-items-costForTwo">{costForTwo}</li> */}
       </div>
     </div>
   );

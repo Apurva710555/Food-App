@@ -1,34 +1,57 @@
+/* In your CSS file (e.g., styles.css) */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  background-color: white; /* Off-white color */
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif; /* Specify the font-family */
+}
+
 .header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  background-color: white; /* Set header background color */
+  align-items: center; /* Align items vertically in the center */
   height: 100px;
+  font-family: Arial, Helvetica Neue, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow at header-bottom intersection */
 }
 
 .logo {
   height: 100px;
   width: 150px;
   padding-right: 10px;
+  margin-bottom: 2px;
+  margin-left: 102px;
 }
 
 .nav-items > ul {
   display: flex;
   list-style-type: none;
-
-  font-size: 20px;
+  font-family: "Roboto", sans-serif;
   margin-top: 10px;
+  margin-right: 170px;
+  color: #3d4152;
+  /* font-weight: bold; */
+  font-size: 16px;
+}
+
+.nav-items > ul > li:hover {
+  color: orange;
 }
 
 .nav-items > ul > li {
   justify-content: center;
   padding: 0 20px;
   margin: 25px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .rest-card {
-  width: 200px;
+  width: 190px;
   margin: 30px;
-
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -36,11 +59,14 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .body-card {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  /* width: 100%; */
 }
 
 .rest-card-items {
@@ -74,6 +100,8 @@
 .search-input {
   width: 150px;
   height: 25px;
+  margin-left: 38px;
+  margin-top: 31px;
 }
 .search-btn {
   margin: 10px;
@@ -83,6 +111,7 @@
 
 .body-items {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .filter-items {
@@ -93,4 +122,128 @@
 
 .filter-nav-items {
   margin-left: 7px;
+}
+
+.header .nav-items ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.rest-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align menu items to start of the middle column */
+  margin: 0 auto;
+  max-width: 800px; /* Adjust as needed */
+  padding: 20px;
+}
+
+.menu-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 690px;
+  padding: 5px;
+  padding-left: 20px;
+}
+
+.login-btn {
+  background-color: white;
+  color: #3b3838;
+  border: none;
+  height: 33px;
+  margin-top: 18px;
+  margin-left: 18px;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  color: orange;
+}
+
+.filter-items {
+  margin-top: 31px;
+}
+
+.card-items-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 6px;
+  font-size: 15px;
+  color: #514d4d;
+}
+
+.rating-container {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 8px;
+  padding-top: 3px;
+}
+
+.card-items-cuisines {
+  opacity: 0.6;
+  font-size: 16px;
+  padding-top: 3px;
+  margin-left: 10px;
+}
+
+.shimmer-rec {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align menu items to start of the middle column */
+  margin: 0 auto;
+  max-width: 800px; /* Adjust as needed */
+}
+
+.shimmer2 {
+  margin-top: 10px;
+  background-color: #f0f0f0;
+  height: 200px;
+  width: 800px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the start of the flex container */
+  margin-bottom: 50px; /* Add spacing between menu items */
+  position: relative; /* Position the menu item relative for absolute positioning */
+}
+
+.item-image {
+  width: 150px; /* Adjust the width of the image */
+  height: 150px; /* Adjust the height of the image */
+  object-fit: cover; /* Ensure the image covers the container */
+  /* Hide overflow to contain the rounded corners */
+  border-radius: 10px;
+  margin-right: 20px; /* Add spacing between image and content */
+  padding-bottom: 15px;
+}
+
+.menu-items-sub {
+  flex-grow: 1; /* Allow content to grow within the flex container */
+}
+
+.item-name {
+  margin-bottom: 5px; /* Add spacing between name and other content */
+  font-weight: bold; /* Make the name bold */
+  font-size: 16px; /* Adjust font size */
+}
+
+.item-description {
+  margin-bottom: 5px; /* Add spacing between description and other content */
+  font-size: 14px; /* Adjust font size */
+}
+
+.item-price,
+.item-rating {
+  margin-bottom: 5px; /* Add spacing between price/rating and other content */
+  font-size: 14px; /* Adjust font size */
+}
+
+.menu-item hr {
+  position: absolute; /* Position the hr element absolutely within the menu item */
+  bottom: 0; /* Position the hr at the bottom of the menu item */
+  left: 0; /* Align the hr to the left edge of the menu item */
+  width: 100%; /* Make the hr span the entire width of the menu item */
+  margin: 0; /* Remove any default margin */
 }

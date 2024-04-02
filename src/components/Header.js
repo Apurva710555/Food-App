@@ -7,7 +7,9 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo-container">
-        <img className="logo" src={LOGO_URL} />
+        <Link to="/">
+          <img className="logo" src={LOGO_URL} />
+        </Link>
       </div>
       <div className="nav-items">
         <ul>
@@ -30,7 +32,6 @@ const Header = () => {
                 ? SetlogTrigger("Logout")
                 : SetlogTrigger("Login");
             }}
-            style={{ padding: "20px", margin: "10px" }}
           >
             {logTrigger}
           </button>
