@@ -1,4 +1,4 @@
-# planning for food ordering App
+# Planning for food ordering App
 
 - Header
 - Logo
