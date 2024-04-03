@@ -13,17 +13,17 @@ body {
   justify-content: space-between;
   background-color: white; /* Set header background color */
   align-items: center; /* Align items vertically in the center */
-  height: 100px;
+  height: 74px;
   font-family: Arial, Helvetica Neue, sans-serif;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow at header-bottom intersection */
 }
 
 .logo {
-  height: 100px;
-  width: 150px;
-  padding-right: 10px;
+  width: 89px;
+  height: 55px;
   margin-bottom: 2px;
-  margin-left: 102px;
+  margin-left: 129px;
+  padding-right: 10px;
 }
 
 .nav-items > ul {
@@ -63,7 +63,7 @@ body {
 }
 
 .body-card {
-  justify-content: center;
+  /* justify-content: center; */
   display: flex;
   flex-wrap: wrap;
   /* width: 100%; */
@@ -139,11 +139,15 @@ body {
 }
 
 .menu-container {
-  border: 1px solid black;
-  border-radius: 10px;
+  background: linear-gradient(
+    rgb(255, 255, 255) -6.71%,
+    rgb(235, 235, 242) 56.19%,
+    rgb(223, 223, 231) 106.56%
+  );
+  padding: 16px;
+  border-radius: 36px;
   width: 690px;
-  padding: 5px;
-  padding-left: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow to the container */
 }
 
 .login-btn {
@@ -206,7 +210,8 @@ body {
   display: flex;
   align-items: flex-start; /* Align items to the start of the flex container */
   margin-bottom: 50px; /* Add spacing between menu items */
-  position: relative; /* Position the menu item relative for absolute positioning */
+  position: relative;
+  width: 100%; /* Add a fixed width to the menu item */ /* Position the menu item relative for absolute positioning */
 }
 
 .item-image {
@@ -221,20 +226,42 @@ body {
 
 .menu-items-sub {
   flex-grow: 1; /* Allow content to grow within the flex container */
+  width: calc(100% - 170px); /* Set a fixed width for the container */
+  overflow: hidden; /* Hide overflowing content */
 }
 
 .item-name {
   margin-bottom: 5px; /* Add spacing between name and other content */
-  font-weight: bold; /* Make the name bold */
-  font-size: 16px; /* Adjust font size */
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro_Bold;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.75);
 }
 
 .item-description {
-  margin-bottom: 5px; /* Add spacing between description and other content */
-  font-size: 14px; /* Adjust font size */
+  margin-top: 12px;
+  word-break: break-word;
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.6);
 }
 
-.item-price,
+.item-price {
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+}
 .item-rating {
   margin-bottom: 5px; /* Add spacing between price/rating and other content */
   font-size: 14px; /* Adjust font size */
@@ -246,4 +273,89 @@ body {
   left: 0; /* Align the hr to the left edge of the menu item */
   width: 100%; /* Make the hr span the entire width of the menu item */
   margin: 0; /* Remove any default margin */
+}
+
+.menu-name {
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro;
+  color: rgba(2, 6, 12, 0.92);
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+}
+
+.menu-recom {
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+  margin-top: 35px;
+}
+
+.menu-rating {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+}
+
+.menu-cuisines {
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro_Bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: -0.1px;
+  color: rgb(241, 87, 0);
+}
+
+.menu-outlet {
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.6);
+}
+
+.Outlet {
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro_Bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+}
+
+.delivery-time {
+  -webkit-font-smoothing: antialiased;
+  font-family: Basis_Grotesque_Pro_Bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.3px;
+  color: rgba(2, 6, 12, 0.92);
+}
+
+.card-items-costForTwo {
+  margin-left: 9px;
+  margin-top: 3px;
+  opacity: 0.9;
+  font-size: 16px;
+}
+
+.login-icon {
+  margin-top: 25px;
+}
+
+.login-icon:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }

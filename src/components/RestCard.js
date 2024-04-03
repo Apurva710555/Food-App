@@ -19,7 +19,7 @@ export const RestCard = (props) => {
           <li className="card-items-avgRating">{avgRating}</li>
         </div>
         <li className="card-items-cuisines">{cuisines.join(",")}</li>
-        {/* <li className="card-items-costForTwo">{costForTwo}</li> */}
+        <li className="card-items-costForTwo">{costForTwo}</li>
       </div>
     </div>
   );

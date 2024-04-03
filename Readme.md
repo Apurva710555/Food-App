@@ -1,19 +1,20 @@
-/\*
-planning for food ordering App
-Header
--Logo
--Nav-Items
+# planning for food ordering App
 
-Body
--Search
--Restro-Container
--Restro-Card
+- Header
+- Logo
+- Nav-Items
 
-Footer
--Copyright
--Links
--Address
-\*/
+# Body
+
+- Search
+- Restro-Container
+  -Restro-Card
+
+# Footer
+
+- Copyright
+- Links
+- Address
 
 # props is basically passing arguments to a function - so we pass props(properties to function component)
 
@@ -32,13 +33,11 @@ Footer
 
 - virtual Dom is the javascript representation
 - reconcilation algorithm(React Fibre)
-
-* this basically updates the
+- this basically updates the actual DOM by comparing with the virtual DOM
 
 # why React is fast?
 
 - React efficiently updates Dom by finding difference between the virtual DOM.
--
 
 # react router dom
 
@@ -46,3 +45,7 @@ Footer
 - anchor tag refreshes the whole page which makes app slow where else the link only refreshes the component which is in the route.
 - this is called client side routing
 - a href is server side routing
+
+# class based components
+
+-

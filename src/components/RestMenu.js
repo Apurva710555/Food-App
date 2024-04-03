@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { ShimmerRec } from "./Shimmer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { faIndianRupee } from "@fortawesome/free-solid-svg-icons";
 
 const RestMenu = () => {
   const [restMenu, setRestMenu] = useState(null);
@@ -41,16 +44,17 @@ const RestMenu = () => {
       <h1 className="menu-name">{name}</h1>
       <div className="menu-container">
         <h3 className="menu-rating">
-          Rating : {avgRating} ({totalRatingsString}) {costForTwoMessage}
+          <FontAwesomeIcon icon={faStar} /> {avgRating} ({totalRatingsString}){" "}
+          {costForTwoMessage}
         </h3>
         <h3 className="menu-cuisines">{cuisines?.join(",")}</h3>
         <h3 className="menu-outlet">
-          <strong>Outlet</strong> {areaName}
+          <strong className="Outlet  ">Outlet </strong> {areaName}
         </h3>
         <h3 className="delivery-time">{sla.deliveryTime} mins</h3>
       </div>
 
-      <h2>
+      <h2 className="menu-recom">
         <strong>Recommended</strong>
       </h2>
       <div className="menu-items">
@@ -60,11 +64,11 @@ const RestMenu = () => {
               <h2 className="item-name">{item.card.info.name}</h2>
               <p className="item-description">{item.card.info.description}</p>
               <p className="item-price">
-                Price : Rs.
+                <FontAwesomeIcon className="rupee" icon={faIndianRupee} />{" "}
                 {item.card.info.price ? item.card.info.price / 100 : "N.A"}
               </p>
               <p className="item-rating">
-                Ratings:{" "}
+                <FontAwesomeIcon icon={faStar} />{" "}
                 {item.card.info.ratings.aggregatedRating.rating
                   ? item.card.info.ratings.aggregatedRating.rating
                   : "NA"}
