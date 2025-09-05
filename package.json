@@ -6,12 +6,14 @@
   "client": "parcel index.html",
   "server": "npm run start --prefix server",
   "dev": "concurrently \"npm run client\" \"npm run server\"",
-  "build": "parcel build index.html && xcopy dist server\\public /E /I /Y"
+  "build": "parcel build index.html && copyfiles -u 1 \"dist/**\" server/public"
 },
+
   "author": "Apurva Muthaye",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^9.2.1",
+    "copyfiles": "^2.4.1",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
