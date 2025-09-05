@@ -51,7 +51,7 @@ const Body = () => {
     SetFilteredList(sortedListed);
   };
 
-  toggleFilter = () => {
+  const toggleFilter = () => {
     !showFilter ? SetShowFilter(true) : SetShowFilter(false);
   };
 

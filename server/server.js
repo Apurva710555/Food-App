@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-
+app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 
 app.get("/api/restaurants", async (req, res) => {
