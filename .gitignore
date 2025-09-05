@@ -8,3 +8,4 @@
 # Env files
 .env
 /server/.env
+server/public/

@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "client": "parcel index.html",
-    "server": "npm run start --prefix server",
-    "dev": "concurrently \"npm run client\" \"npm run server\"",
-    "build": "parcel build index.html && cp -r dist/* server/public/"
-  },
+  "client": "parcel index.html",
+  "server": "npm run start --prefix server",
+  "dev": "concurrently \"npm run client\" \"npm run server\"",
+  "build": "parcel build index.html && xcopy dist server\\public /E /I /Y"
+},
   "author": "Apurva Muthaye",
   "license": "ISC",
   "devDependencies": {
