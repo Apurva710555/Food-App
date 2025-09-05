@@ -62,9 +62,7 @@ const Body = () => {
     const api = await fetch("http://localhost:5000/api/restaurants");
 
     const json = await api.json();
-    console.log(
-      json.data?.cards[1]?.card?.card.gridElements.infoWithStyle.restaurants
-    );
+    // console.log(json);
 
     SetRestList(
       json.data?.cards[1]?.card?.card.gridElements.infoWithStyle.restaurants
