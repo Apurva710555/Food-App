@@ -59,12 +59,12 @@ const Body = () => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const api = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.0748&lng=72.8856&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
+    const api = await fetch("http://localhost:5000/api/restaurants");
 
     const json = await api.json();
-    // console.log(json);
+    console.log(
+      json.data?.cards[1]?.card?.card.gridElements.infoWithStyle.restaurants
+    );
 
     SetRestList(
       json.data?.cards[1]?.card?.card.gridElements.infoWithStyle.restaurants
